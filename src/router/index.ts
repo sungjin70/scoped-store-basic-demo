@@ -1,14 +1,20 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
-import Home from '../views/Home.vue'
+import GlobalStore from '../views/GlobalStore.vue'
+import PageStore from '../views/PageStore.vue'
 
 Vue.use(VueRouter)
 
 const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'GlobalStore',
+    component: GlobalStore
+  },
+  {
+    path: '/pageStore',
+    name: 'PageStore',
+    component: PageStore
   },
   {
     path: '/about',
