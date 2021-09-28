@@ -10,8 +10,9 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorldPageStore from '@/components/HelloWorldPageStore.vue'; // @ is an alias to /src
-import { PageStore, AsPage } from 'vue-scoped-store';
+import { PageStore, Page } from 'vue-scoped-store';
 
+@Page
 @Component({
   components: {
     HelloWorldPageStore,
@@ -21,8 +22,9 @@ export default class Home extends Vue {
   @PageStore()
   private hellowWorld = '';
 
-  @AsPage()
-  private isPage = true;
+  // the deprecated syntax
+  // @AsPage()
+  // private isPage = true;
 
   created() : void {
     this.hellowWorld = 'Default message';
